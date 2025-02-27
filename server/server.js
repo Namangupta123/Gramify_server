@@ -14,6 +14,11 @@ app.use(cors({
 }));
 app.use(express.json());
 
+process.env.LANGSMITH_TRACING="true";
+process.env.LANGSMITH_ENDPOINT=process.env.ENDPOINT;
+process.env.LANGSMITH_API_KEY=process.env.API;
+process.env.LANGSMITH_PROJECT=process.env.PROJECT;
+
 try {
     const model = new ChatMistralAI({
         apiKey: process.env.MISTRAL_API_KEY,
