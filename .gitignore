@@ -1,1 +1,7 @@
 .env
+server/test.ts
+node_modules
+tsconfig.json
+test.js
+server/test2.ts
+test2.js
